@@ -1,0 +1,59 @@
+{
+    "name": "fopost/wordpress",
+    "description": "WordPress plugin that connects a site to FoPost so content composed there is published into WordPress.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "wordpress",
+        "fopost",
+        "publishing",
+        "content-syndication",
+        "social-media"
+    ],
+    "authors": [
+        {
+            "name": "FoPost",
+            "homepage": "https://fopost.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Porter Bridge, LLC",
+            "homepage": "https://fopost.com",
+            "role": "Publisher"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/fopost/fopost-wp/issues",
+        "source": "https://github.com/fopost/fopost-wp",
+        "docs": "https://fopost.com/docs"
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.2",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "wp-coding-standards/wpcs": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fopost\\Wp\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fopost\\Wp\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
