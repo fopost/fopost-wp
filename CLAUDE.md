@@ -5,6 +5,23 @@
 
 ---
 
+## Downstream Packages
+
+These repos wrap this SDK and must be updated in lockstep:
+
+- `fopost-woocommerce` — a WooCommerce add-on that depends on this plugin
+
+**Whenever you change this SDK's public surface — a renamed method, a changed parameter,
+a new or removed resource, a new error type, a bumped minimum language version — you must
+open a matching PR in every repo listed above in the same session.** They are separate
+git repos, checked out as siblings at `../fopost-<child>`. A parent release that silently
+breaks a child is only discovered by the user who upgrades first.
+
+Also bump the child's dependency constraint on this package and note the change in its
+CHANGELOG when this package is released.
+
+---
+
 ## Context Loading Priority
 
 1. `AGENTS.md`: mandatory rules (scope, text domain, security invariants, key names, git workflow)
