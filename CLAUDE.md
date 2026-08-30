@@ -5,6 +5,19 @@
 
 ---
 
+## Downstream Packages
+
+None. This plugin is an **inbound** connector: it verifies a site token FoPost presents on
+the `fopost/v1` REST routes. It holds no FoPost API key, makes no outbound API call, and
+exposes no action, filter or client accessor for another plugin to reuse.
+
+`fopost-woocommerce` is therefore **not** a child of this plugin, despite the name. It talks
+to the API itself through the `fopost/sdk` Composer package, so its parent is `fopost-php`.
+Do not add a dependency between the two plugins without first giving this one an outbound
+client and a public accessor worth sharing.
+
+---
+
 ## Context Loading Priority
 
 1. `AGENTS.md`: mandatory rules (scope, text domain, security invariants, key names, git workflow)
