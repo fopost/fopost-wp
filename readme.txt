@@ -3,7 +3,7 @@ Contributors: fopost
 Donate link: https://fopost.com
 Tags: publishing, content syndication, social media, scheduling, remote publishing
 Requires at least: 6.4
-Tested up to: 6.9
+Tested up to: 7.1
 Stable tag: 0.1.0
 Requires PHP: 8.1
 License: GPLv2 or later
@@ -71,6 +71,22 @@ No. On activation the existing connection is copied over once, so the token you 
 = Does this publish to Twitter, Facebook, or LinkedIn? =
 
 Not this plugin. Social publishing lives in the separate free FoPost Social plugin.
+
+== Third-Party Services ==
+
+This plugin connects your site to FoPost, a hosted publishing service at
+[fopost.com](https://fopost.com). You need a FoPost account for the plugin to do
+anything.
+
+The plugin does not send your content anywhere on its own. It receives requests
+from FoPost and creates or updates posts on this site. To authorise those
+requests it stores a key you generate in FoPost and verifies the signature on
+every incoming request.
+
+What FoPost receives is what you compose there; what this site receives is the
+resulting post. Service terms: [Terms of Service](https://fopost.com/terms-of-service)
+&middot; [Privacy Policy](https://fopost.com/privacy-policy) &middot;
+[Data Processing Addendum](https://fopost.com/dpa).
 
 == Changelog ==
 
