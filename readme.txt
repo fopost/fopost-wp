@@ -42,7 +42,7 @@ This plugin does not post to social networks. If that is what you want, install 
 
 1. Upload the plugin to `wp-content/plugins/fopost`, or install it through Plugins, Add New.
 2. Activate the plugin.
-3. Open **FoPost** in the WordPress admin menu.
+3. Go to **Settings > FoPost**.
 4. Click **Generate Token** and copy the token. It is shown once and never again.
 5. In FoPost, add a WordPress destination and paste your site URL together with the token.
 

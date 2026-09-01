@@ -46,18 +46,16 @@ class SettingsPage
     }
 
     /**
-     * Register the admin menu page.
+     * Register the settings page under the Settings menu.
      */
     public function register(): void
     {
-        add_menu_page(
+        add_options_page(
             page_title: __('FoPost', 'fopost'),
             menu_title: __('FoPost', 'fopost'),
             capability: 'manage_options',
             menu_slug: self::PAGE_SLUG,
             callback: [$this, 'render'],
-            icon_url: 'dashicons-share',
-            position: 30,
         );
     }
 
@@ -156,7 +154,7 @@ class SettingsPage
         wp_safe_redirect(
             add_query_arg(
                 ['page' => self::PAGE_SLUG, 'fopost-notice' => $notice],
-                admin_url('admin.php'),
+                admin_url('options-general.php'),
             ),
         );
         exit;

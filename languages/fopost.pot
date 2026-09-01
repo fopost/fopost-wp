@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FoPost 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/fopost/fopost-wp/issues\n"
-"POT-Creation-Date: 2026-09-01+0000\n"
+"POT-Creation-Date: 2026-09-01 00:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FoPost <https://fopost.com/contact>\n"
 "Language-Team: FoPost <https://fopost.com/contact>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: fopost\n"
 
- 00:00#: fopost.php:36
+#: fopost.php:36
 msgid ""
 "FoPost requires Composer dependencies. Please run \"composer install\" in "
 "the plugin directory."
@@ -24,7 +24,7 @@ msgstr ""
 msgid "FoPost"
 msgstr ""
 
-#: src/Admin/SettingsPage.php:148
+#: src/Admin/SettingsPage.php:146
 msgid "You are not allowed to manage FoPost settings."
 msgstr ""
 
