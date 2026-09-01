@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:       FoPost
- * Plugin URI:        https://fopost.com
+ * Plugin URI:        https://fopost.com/docs/sdks/wordpress
  * Description:       Connect this site to FoPost so posts you compose there are published into WordPress.
  * Version:           0.1.0
  * Requires at least: 6.4
