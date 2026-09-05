@@ -1,5 +1,5 @@
 === FoPost ===
-Contributors: fopost, alihesari
+Contributors: alihesari
 Donate link: https://fopost.com
 Tags: publishing, content syndication, social media, scheduling, remote publishing
 Requires at least: 6.4
