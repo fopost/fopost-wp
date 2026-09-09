@@ -13,7 +13,7 @@ Connect this site to FoPost so posts you compose there are published into WordPr
 
 == Description ==
 
-FoPost is a hosted dashboard for planning and publishing content. This plugin is the connector that lets FoPost deliver posts into your WordPress site.
+[FoPost](https://fopost.com) is a hosted dashboard for planning and publishing content. This plugin is the connector that lets FoPost deliver posts into your WordPress site.
 
 It does one job: it manages a site token. You generate the token in the WordPress admin, paste it into FoPost along with your site URL, and FoPost presents it back on every request. Nothing else in WordPress is exposed.
 
