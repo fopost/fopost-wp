@@ -11,7 +11,9 @@ ZIP_FILE     := $(DIST_DIR)/$(PLUGIN_SLUG)-$(VERSION).zip
 # SVN settings
 SVN_URL      := https://plugins.svn.wordpress.org/$(PLUGIN_SLUG)
 SVN_DIR      := .svn-wp
-SVN_USER     ?= $(shell echo $${WP_ORG_SVN_USERNAME})
+SVN_USER     ?= $(WP_ORG_SVN_USERNAME)
+# Empty SVN_USER would leave a bare --username that swallows the next flag.
+SVN_AUTH     := $(if $(strip $(SVN_USER)),--username $(strip $(SVN_USER)),)
 
 .DEFAULT_GOAL := help
 
@@ -87,7 +89,7 @@ svn-checkout: ## One-time: checkout WordPress.org SVN repo
 		echo "    Run 'make svn-update' to pull latest changes."; \
 	else \
 		echo "==> Checking out $(SVN_URL)…"; \
-		svn checkout $(SVN_URL) $(SVN_DIR) --username $(SVN_USER); \
+		svn checkout $(SVN_URL) $(SVN_DIR) $(SVN_AUTH); \
 		echo "==> Done! SVN working copy at $(SVN_DIR)"; \
 	fi
 
@@ -176,7 +178,7 @@ svn-push: ## Commit trunk and the staged tag to WordPress.org in one revision
 		exit 1; \
 	fi
 	@echo "==> Committing v$(VERSION) to WordPress.org…"
-	cd $(SVN_DIR) && svn commit --username $(SVN_USER) -m "Release $(VERSION)"
+	cd $(SVN_DIR) && svn commit $(SVN_AUTH) -m "Release $(VERSION)"
 	@echo "==> trunk and tags/$(VERSION) committed in a single revision."
 
 .PHONY: svn-assets
@@ -197,7 +199,7 @@ svn-assets: ## Sync assets/ to SVN assets branch (banners, icons, screenshots)
 	rsync -rc --delete wp-assets/ $(SVN_DIR)/assets/
 	cd $(SVN_DIR) && svn add --force assets
 	cd $(SVN_DIR) && svn status assets | awk '/^!/ {print $$2}' | xargs -I {} svn rm "{}"
-	cd $(SVN_DIR) && svn commit --username $(SVN_USER) assets -m "Update plugin assets"
+	cd $(SVN_DIR) && svn commit $(SVN_AUTH) assets -m "Update plugin assets"
 	@echo "==> Assets updated on WordPress.org."
 
 .PHONY: release
