@@ -37,7 +37,7 @@ $fopost_notice = isset($_GET['fopost-notice']) ? sanitize_key(wp_unslash($_GET['
                 <?php esc_html_e('FoPost is the hosted dashboard this token pairs with. Compose once, schedule ahead on a shared calendar, and see what performed. WordPress becomes one destination among many, so a single post can reach this site and your social accounts at once.', 'fopost'); ?>
             </p>
             <p>
-                <a class="button button-primary" href="<?php echo esc_url(\Fopost\Wp\Admin\SettingsPage::url('/register', 'settings-page')); ?>" target="_blank" rel="noopener noreferrer">
+                <a class="button button-primary" href="<?php echo esc_url(\Fopost\Wp\Admin\SettingsPage::url('/dashboard/register', 'settings-page')); ?>" target="_blank" rel="noopener noreferrer">
                     <?php esc_html_e('Start a free trial', 'fopost'); ?>
                 </a>
                 <a class="button" href="<?php echo esc_url(\Fopost\Wp\Admin\SettingsPage::url('/platforms', 'settings-page-platforms')); ?>" target="_blank" rel="noopener noreferrer">
