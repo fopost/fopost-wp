@@ -4,7 +4,7 @@ Donate link: https://fopost.com
 Tags: publishing, content syndication, social media, scheduling, remote publishing
 Requires at least: 6.4
 Tested up to: 7.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -90,11 +90,17 @@ resulting post. Service terms: [Terms of Service](https://fopost.com/terms-of-se
 
 == Changelog ==
 
+= 0.1.1 =
+* Fixed the "Start a free trial" button on the settings page, which pointed at a page that does not exist.
+
 = 0.1.0 =
 * First release: site token generation and revocation, incoming content policy (status, author, post type), and the FoPost REST routes for creating posts, uploading images, and deleting content the plugin created.
 * Connections from the previously OwlStack-branded plugin are carried over on activation.
 
 == Upgrade Notice ==
+
+= 0.1.1 =
+Fixes the broken sign-up link on the settings page.
 
 = 0.1.0 =
 First release.

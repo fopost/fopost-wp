@@ -4,7 +4,7 @@
  * Plugin Name:       FoPost
  * Plugin URI:        https://fopost.com/docs/sdks/wordpress
  * Description:       Connect this site to FoPost so posts you compose there are published into WordPress.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 6.4
  * Requires PHP:      8.1
  * Author:            FoPost
@@ -23,7 +23,7 @@ if (! defined('ABSPATH')) {
 }
 
 // Plugin constants.
-define('FOPOST_VERSION', '0.1.0');
+define('FOPOST_VERSION', '0.1.1');
 define('FOPOST_FILE', __FILE__);
 define('FOPOST_DIR', plugin_dir_path(__FILE__));
 define('FOPOST_URL', plugin_dir_url(__FILE__));
