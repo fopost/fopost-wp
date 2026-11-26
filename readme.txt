@@ -3,7 +3,7 @@ Contributors: alihesari
 Donate link: https://fopost.com
 Tags: publishing, content syndication, social media, scheduling, remote publishing
 Requires at least: 6.4
-Tested up to: 7.1
+Tested up to: 7.2
 Stable tag: 0.1.1
 Requires PHP: 8.1
 License: GPLv2 or later
